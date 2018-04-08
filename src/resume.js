@@ -28,17 +28,13 @@ class Resume extends Component {
     this.setState({ numPages });
   }
 
-  buttonClickHandler = () => {
-    console.log('BOOM')
-  }
-
   render() {
     const { pageNumber } = this.state;
 
     return (
       <div className="Resume">
         <div style={styles.flex}>
-          <a href="./pdf/" download="JASON_GOEBEL-resume.pdf">
+          <a href="./static/media/" download="JASON_GOEBEL-resume.pdf">
             <button style={styles.button}>
               Download PDF
             </button>
