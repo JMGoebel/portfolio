@@ -8,7 +8,8 @@ import Radium, {StyleRoot} from 'radium';
 
 import Projects from './projects';
 import Resume from './resume';
-import Contact from './contact';
+import About from './about';
+import Footer from './footer';
 
 import './App.css';
 
@@ -33,6 +34,9 @@ const styles = {
     textAlign: 'center',
     backgroundColor: 'black'
   },
+  footSpace: {
+    marginBottom: '80px',
+  }
 }
 
 class App extends Component {
@@ -55,12 +59,13 @@ class App extends Component {
               <ul style={styles.nav}>
                 <li><Link className="Link" style={styles.links} to='/'>Projects</Link></li>
                 <li><Link className="Link" style={styles.links} to='/resume'>Resume</Link></li>
-                <li><Link className="Link" style={styles.links} to='/contact'>Contact</Link></li>
               </ul>
             </div>
             <Route exact path="/" component={Projects}/>
+            <Route exact path="/about" component={About}/>
             <Route path="/resume" component={Resume}/>
-            <Route path="/contact" component={Contact}/>
+            <div style={styles.footSpace}></div>
+            <Footer />
           </div>
         </Router>
       </StyleRoot>
