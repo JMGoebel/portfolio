@@ -1,3 +1,12 @@
+body, p {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+}
+
 .Navigation ul {
   list-style: none;
   margin: 0;
@@ -7,4 +16,24 @@
 .Navigation li {
   display: inline-block;
   padding-right: 10px;
+}
+
+.Projects li:last-child {
+  padding-right: 0;
+}
+
+a {
+  color: white;
+  opacity: .75;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 30px;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+a:active {
+  opacity: 1 !important;
 }
